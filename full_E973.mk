@@ -24,9 +24,9 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 PRODUCT_NAME := full_E973
-PRODUCT_DEVICE := mako
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Nexus 4
+PRODUCT_DEVICE := E973
+PRODUCT_BRAND := LG
+PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 

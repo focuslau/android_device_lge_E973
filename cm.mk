@@ -15,10 +15,10 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 $(call inherit-product, device/lge/mako/full_E973.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := mako
-PRODUCT_NAME := cm_mako
-PRODUCT_BRAND := Google
-PRODUCT_MODEL := Nexus 4
+PRODUCT_DEVICE := E973
+PRODUCT_NAME := cm_E973
+PRODUCT_BRAND := LG
+PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LGE
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT=google/occam/mako:4.2/JOP40C/527662:user/release-keys PRIVATE_BUILD_DESC="occam-user 4.2 JOP40C 527662 release-keys":persist.radio.kickstart=on
