@@ -97,4 +97,4 @@ BOARD_HAVE_LOW_LATENCY_AUDIO := true
 
 -include vendor/lge/mako/BoardConfigVendor.mk
 
-BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_NO_SELECT_BUTTON := false
