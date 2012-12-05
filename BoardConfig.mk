@@ -27,8 +27,8 @@ TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=67677
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81508000
 
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := mako_defconfig
