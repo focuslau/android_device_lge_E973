@@ -25,13 +25,13 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_NO_BOOTLOADER := true
 
-BOARD_KERNEL_BASE := 0x80200000
+BOARD_KERNEL_BASE := 0x81508000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=67677
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := mako_defconfig
+TARGET_KERNEL_CONFIG := E973_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_FLUENCE_INCALL := true
@@ -43,11 +43,13 @@ BLUETOOTH_HCI_USE_MCT := true
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := msm8960
-TARGET_BOOTLOADER_BOARD_NAME := MAKO
+# We keep mako kernel board name here, i'm not really advanced with kernel and dont
+# want to screw everything
+TARGET_BOOTLOADER_BOARD_NAME := mako
 TARGET_BOOTLOADER_NAME=mako
-TARGET_BOARD_INFO_FILE := device/lge/mako/board-info.txt
+TARGET_BOARD_INFO_FILE := device/lge/E973/board-info.txt
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/mako/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/E973/bluetooth
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
@@ -60,7 +62,7 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_AP  := "ap"
 
-BOARD_EGL_CFG := device/lge/mako/egl.cfg
+BOARD_EGL_CFG := device/lge/E973/egl.cfg
 
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
@@ -71,6 +73,7 @@ TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITION := true
 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+# We will also keep mako recovery
 TARGET_RECOVERY_UI_LIB := librecovery_ui_mako
 
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -91,10 +94,10 @@ BOARD_LIB_DUMPSTATE := libdumpstate.mako
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 TARGET_NO_RPC := true
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/lge/mako
+TARGET_RELEASETOOLS_EXTENSIONS := device/lge/E973
 
 BOARD_HAVE_LOW_LATENCY_AUDIO := true
 
--include vendor/lge/mako/BoardConfigVendor.mk
+-include vendor/lge/E973/BoardConfigVendor.mk
 
-BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_NO_SELECT_BUTTON := false

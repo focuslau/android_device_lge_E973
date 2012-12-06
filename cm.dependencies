@@ -1,7 +1,8 @@
 [
  {
    "repository": "lge-kernel-mako",
-   "target_path": "kernel/lge/mako",
+   "target_path": "kernel/lge/E973",
    "branch": "jellybean"
  }
 ]
+# Kept mako kernel repository until we get merged in CyanogenMod repo
