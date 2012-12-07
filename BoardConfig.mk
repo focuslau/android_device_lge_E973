@@ -96,7 +96,7 @@ TARGET_NO_RPC := true
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/E973
 
-#BOARD_HAVE_LOW_LATENCY_AUDIO := true
+BOARD_HAVE_LOW_LATENCY_AUDIO := true
 
 -include vendor/lge/E973/BoardConfigVendor.mk
 
