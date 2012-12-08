@@ -45,6 +45,3 @@
 /dev/block/mmcblk0p12     0660   system     system
 /dev/block/mmcblk0p13     0660   system     system
 /dev/block/mmcblk0p14     0660   system     system
-/dev/block/mmcblk0p1      0640   radio      radio
-/dev/block/mmcblk0p10     0640   radio      radio
-/dev/block/mmcblk0p11     0640   radio      radio
