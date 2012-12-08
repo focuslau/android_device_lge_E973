@@ -9,7 +9,8 @@ TARGET_SCREEN_WIDTH := 720
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+# Test to remove the NFC wakelock
+#$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/E973/full_E973.mk)
