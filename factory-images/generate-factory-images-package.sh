@@ -21,8 +21,9 @@
 
 source ../../../common/clear-factory-images-variables.sh
 BUILD=521994
-DEVICE=E973
-PRODUCT=geeb
+#We keep mako here to keep all the goodies from mako (i.e. photosphere)
+DEVICE=mako
+PRODUCT=occam
 VERSION=jop32b
 #SRCPREFIX=signed-
 BOOTLOADER=geebz10k
