@@ -20,6 +20,8 @@ failed ()
   exit $2
 }
 
+/system/xbin/bash /system/etc/init.bdaddr.sh
+
 # Note that "hci_qcomm_init -e" prints expressions to set the shell variables
 # BTS_DEVICE, BTS_TYPE, BTS_BAUD, and BTS_ADDRESS.
 
@@ -34,7 +36,7 @@ logi "DUTADDR : $DUTADDR"
 #load bd addr
 if [$DUTADDR == ""]
 then
-BDADDR=`/system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x`
+BDADDR=`/system/bin/bdAddrLoader -f /data/misc/bluedroid/.bdaddr -h -x`
 else
 BDADDR=`/system/bin/bdAddrLoader -p net.btdut.address -s -x`
 fi
