@@ -172,7 +172,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	alsa.msm8960 \
-	audio_policy.msm8960 \
+	audio_policy.msm8064 \
 	audio.primary.msm8960 \
 	audio.a2dp.default \
 	audio.usb.default \
@@ -186,7 +186,8 @@ PRODUCT_PACKAGES += \
 	power.msm8960
 
 PRODUCT_COPY_FILES += \
-	device/lge/E973/init.mako.bt.sh:system/etc/init.mako.bt.sh
+	device/lge/E973/init.mako.bt.sh:system/etc/init.mako.bt.sh \
+	device/lge/E973/init.bdaddr.sh:system/etc/init.bdaddr.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
