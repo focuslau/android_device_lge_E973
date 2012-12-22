@@ -101,30 +101,29 @@ PRODUCT_COPY_FILES += \
 # GPS configuration
 PRODUCT_COPY_FILES += \
 	device/lge/E973/gps.conf:system/etc/gps.conf
-
-# Trying to remove NFC reference to remove the wakelock that prevent device from sleeping correctly	
+	
 # NFC packages
-#PRODUCT_PACKAGES += \
-#    libnfc-nci \
-#    libnfc_nci_jni \
-#    nfc_nci.mako \
-#    NfcNci \
-#    Tag \
-#    com.android.nfc_extras
+PRODUCT_PACKAGES += \
+    libnfc-nci \
+    libnfc_nci_jni \
+    nfc_nci.mako \
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
 
 # NFCEE access control
-#ifeq ($(TARGET_BUILD_VARIANT),user)
-#    NFCEE_ACCESS_PATH := device/lge/E973/nfc/nfcee_access.xml
-#else
-#    NFCEE_ACCESS_PATH := device/lge/E973/nfc/nfcee_access_debug.xml
-#endif
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := device/lge/E973/nfc/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := device/lge/E973/nfc/nfcee_access_debug.xml
+endif
 
 # NFC access control + feature files + configuration
-#PRODUCT_COPY_FILES += \
-#    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
-#    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-#    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-#    device/lge/E973/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
+PRODUCT_COPY_FILES += \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    device/lge/E973/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072
